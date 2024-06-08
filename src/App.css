@@ -1,38 +1,168 @@
-.App {
-  text-align: center;
+body {
+  padding-left: 20px;
+  font-size: 14pt;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input,
+button {
+  font: inherit;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type='submit'],
+button {
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.AddMonsterForm {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.AddMonsterForm input {
+  padding: 1.5rem;
+  border: 1px solid #666;
+  border-radius: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.AddMonsterForm input[type='text'] {
+  flex-grow: 1;
+  margin-right: 0.5rem;
+}
+
+.monsterTypes {
+  list-style-type: none;
+  padding: 0;
+}
+
+.MonsterType {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  max-width: 240px;
+  background-color: #eee;
+}
+
+.MonsterType .remove-button {
+  font-size: 80%;
+  float: right;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+}
+
+.MonsterType .remove-button:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.MonsterTypeFormDiv {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.AddChallengeRatingForm {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.AddChallengeRatingForm input {
+  padding: 1.5rem;
+  border: 1px solid #666;
+  border-radius: 3px;
+}
+
+.AddChallengeRatingForm input[type='text'] {
+  flex-grow: 1;
+  margin-right: 0.5rem;
+}
+
+.challengeRatings {
+  list-style-type: none;
+  padding: 0;
+}
+
+.ChallengeRating {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  max-width: 240px;
+  background-color: #eee;
+}
+
+.ChallengeRating .remove-button {
+  font-size: 80%;
+  float: right;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+}
+
+.ChallengeRating .remove-button:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.ChallengeRatingFormDiv {
+  display: inline-block;
+}
+
+.flex-container{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.monsterSection{
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.overlay {
+  position: fixed; /* Ensure the overlay covers the entire viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.monsterDetailButton{
+  padding-left: 10px;
+  padding-right: 10px;
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  color: #069;
+  cursor: pointer;
+  display: flex;
+}
+
+.List_of_returned_data{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  height: 100%;
 }
